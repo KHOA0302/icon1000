@@ -1,0 +1,33 @@
+:root {
+    --primary-color: #afa265;
+    --white-color: white;
+    --black-color: black;
+    --text-color: #444;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body {  
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+h2, h5, ul {
+   margin: 0;   
+   padding: 0;
+}
+
+.grid {
+    width: calc(100% - 630px);
+    max-height: 100%;
+    margin:0 auto;
+}
