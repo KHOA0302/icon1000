@@ -24,7 +24,7 @@ function reveal() {
         //     reveals[i].classList.remove('active');
         // }
     }
-    console.log(revealtop);
+    //console.log(revealtop);
 }
 
 reveal();
@@ -76,7 +76,7 @@ function fadeOut1() {
         //     fadeOut1s[i].classList.remove('appear');
         // }
     }
-    console.log(fadeOut1top);
+    //console.log(fadeOut1top);
 }
 
 window.addEventListener('scroll', Reveal);
@@ -98,5 +98,5 @@ function Reveal() {
         //     Reveals[i].classList.remove('appear');
         // }
     }
-    console.log(Revealtop);
+    //console.log(Revealtop);
 }
