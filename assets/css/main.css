@@ -621,11 +621,11 @@
 }
 
 .appear {
-   animation: runFromLeft 1.75s 0.2s forwards cubic-bezier(0, 0.5, 0.25, 1)
+   animation: runFromLeft 1.75s 0.2s forwards cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 .appear1 {
-   animation: runFromRight 1.75s 0.2s forwards cubic-bezier(0, 0.5, 0.25, 1)
+   animation: runFromRight 1.75s 0.2s forwards cubic-bezier(0, 0.5, 0.25, 1);
 }
 
                                                        /* STORE  */
@@ -751,6 +751,8 @@
    height: 456px;
    float: left;
    background-color: #1f1f1f;
+   opacity: 0;
+   transition: all 0.2s;
 }
 
 .main__recruit-des {
@@ -842,5 +844,203 @@
 }
 
 .main__recruit-job-link:hover:before {
+   width: 35px;
+}
+
+.BlurDelay {
+   opacity: 0;
+   animation: BlurDelay 1s forwards linear;
+}
+
+                                       /* NEWS */
+
+.main__news {
+   float: left;   
+   background-color: #1f1f1f;
+   width: 100%;
+   text-align: center;
+}
+
+.main__news-icon {
+   margin-top: 90px;
+   padding-bottom: 70px;
+}
+
+.main__news-icon svg {
+   background-color: white;
+   width: 190px;
+   height: 40px;
+   border-radius: 5px;
+}
+
+.main__news-heading-link {
+   text-decoration: none;
+}
+
+.main__news-heading {
+   font-size: 14rem;
+   line-height: 16rem;
+   color: var(--white-color);
+   font-weight: 400;
+   letter-spacing: 14px;
+   opacity: 0;
+}
+
+.main__news-sudheading {
+   font-size: 2rem;
+   font-weight: 400;
+   line-height: 2rem;
+   color: #7d7d7d;
+   opacity: 0;
+}
+
+.main__news-separation {
+   height: 150px;
+   width: 1px;
+   background-color: rgb(102, 102, 102);
+   display: inline-block;
+   margin: 60px 0px;
+   opacity: 0;
+}
+
+.main__news-section {
+   width: 100%;
+   float: left;
+   height: 62.5vw;
+}
+
+.main__news-section-link-left {
+   position: relative;
+   width: 50%;
+   height: 100%;
+   float: left;
+   text-align: initial;
+}
+
+.main__news-section-wrap {
+   height: 100%;
+}
+
+.main__news-section-background {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-image: url(/assets/img/newsBackground1.jpg);
+   background-image: url(https://s3-us-west-2.amazonaws.com/iconmotosports/lifestyle/icon/_wFull/unspecified-1.jpg?mtime=20200413161014);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.main__news-section-background::after {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.2);
+   transition: all 0.2s;
+}
+
+.mains__news-section-title {
+   position: absolute;
+   width: 100%;
+   float: left;
+   bottom: 0;
+   padding: 0 90px 60px;
+   opacity: 0;
+}
+
+.main__news-section-heading {
+   font-size: 4rem;
+   line-height: 4rem;
+   font-weight: 400;
+   letter-spacing: 1.5px;
+}
+
+.main__news-section-sudheading {
+   color: var(--white-color);
+   font-size: 1.9rem;
+   font-weight: 300;
+   line-height: 2.5rem;
+   letter-spacing: 2px;
+   margin-top: 5px;
+}
+
+.main__news-section-link-left:hover .main__news-section-background:after {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+                         /* NOTABLE NEWS */
+
+.main__news-notable { 
+   position: relative;
+   width: 100%;
+   text-align: center;
+   padding: 140px 56px;
+   float: left;
+   opacity: 0;
+}
+
+.main__news-notable-heading {
+   color: #444;
+   font-size: 4rem;
+   font-weight: 400;
+   line-height: 5rem;
+   margin-bottom: 15px;
+}
+
+.main__news-notable-subheading {
+   font-size: 1.5rem;
+   font-weight: 400;
+   letter-spacing: 1.2px;
+   color: #292929;
+}
+
+.main__news-notable-content {
+   text-transform: initial;
+   font-size: 1.5rem;
+   line-height: 2.5rem;
+}
+
+.main__news-notable-content p {
+   color: #616161;
+}
+
+.main__news-notable-link {
+   position: relative;
+   display: inline-block;
+   margin-top: 20px;
+   padding-top: 10px;
+   padding-bottom: 8px;
+   padding-left: 5px;
+   font-size: 1.4rem;
+   letter-spacing: 4px;
+   line-height: 2rem;
+   font-weight: 900;
+   text-decoration: none;
+}
+
+.main__news-notable-link:hover {
+   color: var(--primary-color);
+}
+
+.main__news-notable-link::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   height: 3px;
+   background: var(--primary-color);
+   transition: all 0.3s;
+   transform-origin: center center;
+}
+
+.main__news-notable-link:hover:before {
    width: 35px;
 }

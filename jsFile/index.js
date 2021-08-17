@@ -6,7 +6,6 @@ window.addEventListener("scroll", function(){
                         /*  REVEAL ELEMENT  */
 
 window.addEventListener('scroll', reveal);
-                        
 function reveal() {
     var reveals = document.querySelectorAll(' .reveal');
 
@@ -24,16 +23,7 @@ function reveal() {
         //     reveals[i].classList.remove('active');
         // }
     }
-    //console.log(revealtop);
 }
-
-reveal();
-
-// window.addEventListener("scroll", function(){
-//   var div = document.querySelector(".fadeOut");
-//   if(this.window.scrollY > 800)
-//   div.classList.add("appear");
-// })
 
 window.addEventListener('scroll', fadeOut);
                         
@@ -54,11 +44,9 @@ function fadeOut() {
         //     fadeOuts[i].classList.remove('appear');
         // }
     }
-    console.log(fadeOuttop);
 }
 
-window.addEventListener('scroll', fadeOut1);
-                        
+window.addEventListener('scroll', fadeOut1);              
 function fadeOut1() {
     var fadeOut1s = document.querySelectorAll(' .fadeOut1');
 
@@ -72,11 +60,7 @@ function fadeOut1() {
         if(fadeOut1top < windowheight - fadeOut1point){
           fadeOut1s[i].classList.add('appear1');
         }
-        // else {
-        //     fadeOut1s[i].classList.remove('appear');
-        // }
     }
-    //console.log(fadeOut1top);
 }
 
 window.addEventListener('scroll', Reveal);
@@ -94,9 +78,23 @@ function Reveal() {
         if(Revealtop < windowheight - Revealpoint){
           Reveals[i].classList.add('revealDelay');
         }
-        // else {
-        //     Reveals[i].classList.remove('appear');
-        // }
+    };
+}
+
+window.addEventListener('scroll', Blur);
+                        
+function Blur() {
+    var Blurs = document.querySelectorAll(' .Blur');
+
+    for(var i = 0; i < Blurs.length; i++){
+
+        var windowheight = window.innerHeight;
+
+        var Blurtop = Blurs[i].getBoundingClientRect().top;
+        var Blurpoint = 150;
+
+        if(Blurtop < windowheight - Blurpoint){
+          Blurs[i].classList.add('BlurDelay');
+        }
     }
-    //console.log(Revealtop);
 }

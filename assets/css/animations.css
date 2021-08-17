@@ -54,3 +54,12 @@
         transform: translateY(0);
     }
 }
+
+@keyframes BlurDelay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
