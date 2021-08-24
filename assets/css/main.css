@@ -1221,6 +1221,10 @@
    margin-right: 20px;
 }
 
+.main__footer-connect-moreinfo-social-item:last-child {
+   margin-right: 0;
+}
+
 .main__footer-connect-moreinfo-social-link {
 
 }
@@ -1241,13 +1245,27 @@
 .main__footer-connect-moreinfo-proclaim-item::after {
    content: "";
    position: absolute;
-   height: 100%;
-   width: 1px;
+   height: 70%;
+   width: 2px;
    background-color: var(--black-color);
+}
+
+.main__footer-connect-moreinfo-proclaim-item:last-child:after {
+   display: none;
+}
+
+.main__footer-connect-moreinfo-proclaim-item:last-child  a{
+   margin-right: 0;
 }
 
 .main__footer-connect-moreinfo-proclaim-link {
    text-transform: initial;
+   margin: 0 10px;
+   color: #4a4a4a;
+}
+
+.main__footer-connect-moreinfo-proclaim-link:hover {
+   color: var(--black-color);
 }
 
 .main__footer-connect-ending {
