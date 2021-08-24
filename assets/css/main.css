@@ -1245,9 +1245,10 @@
 .main__footer-connect-moreinfo-proclaim-item::after {
    content: "";
    position: absolute;
-   height: 70%;
+   height: 76%;
    width: 2px;
    background-color: var(--black-color);
+   bottom: 14%;
 }
 
 .main__footer-connect-moreinfo-proclaim-item:last-child:after {
