@@ -98,3 +98,29 @@ function Blur() {
         }
     }
 }
+
+///////////////////////////////////////////HOVER OVERPLAY////////////////////////////////////////////////////////////////
+window.addEventListener("load", test);
+
+function test(){
+  var target = document.querySelectorAll('.header__navbar-item-link');
+  var overplay = document.querySelector(' .overplay');
+  for(var i = 0; i < target.length; ++i) {
+  target[i].onmouseover = function() {
+    overplay.style.display = 'block';  
+  }
+  target[i].onmouseout = function() {
+    overplay.style.display = 'block';  
+  }
+ }
+};
+
+window.addEventListener("scroll", unhidden);
+
+function unhidden() {
+    var appear = document.querySelector('.sticky');
+    var topOverplay = document.querySelector('.overplay');
+    if(appear) topOverplay.style.top = '60px'; 
+    else topOverplay.style.top = '120px';
+}
+
