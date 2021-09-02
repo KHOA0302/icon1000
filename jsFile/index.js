@@ -99,25 +99,37 @@ function Blur() {
     }
 }
 
-///////////////////////////////////////////HOVER OVERPLAY////////////////////////////////////////////////////////////////
-window.addEventListener("load", test);
+///////////////////////////////////////////HOVER OVERPLAY BY USING JAVASCRIPT AND related things////////////////////////////////////////////////////////////////
+window.addEventListener("load", appear);
 
-function test(){
-  var target = document.querySelectorAll('.header__navbar-item-link');
-  var overplay = document.querySelector(' .overplay');
-  for(var i = 0; i < target.length; ++i) {
-  target[i].onmouseover = function() {
-    overplay.style.display = 'block';  
-  }
-  target[i].onmouseout = function() {
-    overplay.style.display = 'block';  
+function appear(){
+  var targetAppear = document.querySelectorAll('.header__navbar-item-link');
+  var overplay = document.querySelector('.overplay');
+
+  for(var i = 0; i < targetAppear.length; ++i) {
+  targetAppear[i].onmouseover = function() {
+    overplay.style.display = 'block'; 
   }
  }
 };
 
-window.addEventListener("scroll", unhidden);
+window.addEventListener("load", hidden);
 
-function unhidden() {
+function hidden(){
+  var targetHidden = document.querySelector('.the-gear-wrap');
+  var overplay = document.querySelector('.overplay');
+   
+  targetHidden.onmouseover = function() {
+    overplay.style.display = 'block';
+  }
+  targetHidden.onmouseout = function() {
+    overplay.style.display = 'none';
+  }
+ };
+
+window.addEventListener("scroll", closed);
+
+function closed() {
     var appear = document.querySelector('.sticky');
     var topOverplay = document.querySelector('.overplay');
     if(appear) topOverplay.style.top = '60px'; 

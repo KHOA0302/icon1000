@@ -257,6 +257,10 @@
    height: 4px;
 }
 
+.sticky .header__navbar-item-wrap::after {
+   bottom: 20%;
+}
+
 .header__navbar-item {
    height: 100%;
    list-style: none;
@@ -1302,7 +1306,8 @@
    width: 100%;
    height: 100%;
    z-index: 10;
-   /* display: none; */
+   transition: all 0.2s;
+   display: none;
 }
 
 .the-gear a, li {
@@ -1314,6 +1319,7 @@
    position: absolute;
    z-index: 1;
    width: 100%;
+   height: 65%;
 }
 
 .the-gear-list {
@@ -1444,7 +1450,7 @@
    position: absolute;
    top: -120px;
    background-color: rgba(0, 0, 0, 0.8);
-   height: 120%;
+   height: 100%;
    width: 100%;
 }
 
