@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/css/animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <script type="text/javascript" src = "./jsFile/index.js"></script>
     <title>Icon 1000</title>
 <body>
     <div class="app">
@@ -37,17 +36,17 @@
                     <ul class="header__navbar-option-left">
                         <li class="header__navbar-item">
                             <div class="header__navbar-item-wrap">
-                                <a href="#" class="header__navbar-item-link">the gear</a>
+                                <a href="#" class="header__navbar-item-link the-gear-link">the gear</a>
                             </div>
                         </li>
                         <li class="header__navbar-item">
                             <div class="header__navbar-item-wrap">
-                                <a href="#" class="header__navbar-item-link">the ride</a>
+                                <a href="#" class="header__navbar-item-link the-ride-link">the ride</a>
                             </div>
                         </li>
                         <li class="header__navbar-item">
                             <div class="header__navbar-item-wrap">
-                                <a href="#" class="header__navbar-item-link">the brand</a>
+                                <a href="#" class="header__navbar-item-link the-brand-link">the brand</a>
                             </div>
                         </li>
                     </ul>
@@ -421,7 +420,7 @@
              </div>
             </div>
         </footer>
-        <div class="overplay">
+        <div class="overplay" data-modal>
             <div class="supernav"></div>
             <div class="the-gear">
                 <div class="the-gear-wrap">
@@ -544,16 +543,19 @@
                             <h5 class="the-gear-main-link-subheading">Explore collections</h5>
                         </div>
                     </a>
+                    <!-- <div class="zone-hidden"></div> -->
                 </div>
             </div>
-            <div class="the-ride"></div>
+            <div class="the-ride">
+            </div>
             <div class="the-brand"></div>
             <div class="the-"></div>
             <div class="store-locator"></div>
             <div class="search"></div>
+            <div class="zone-hidden" style="z-index: 20;"></div>
             <div class="cover-main"></div>
         </div>
     </div>
-
 </body>
+<script type="text/javascript" src = "./jsFile/index.js"></script>
 </html>

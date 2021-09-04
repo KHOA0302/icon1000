@@ -253,7 +253,7 @@
    transition: 0.2s;
 }
 
-.header__navbar-item-wrap:hover::after {
+.bonus .header__navbar-item-wrap::after {
    height: 4px;
 }
 
@@ -1303,10 +1303,18 @@
    position: fixed;
    top: 120px;
    transition: width 0s .25s,height 0s .25s;
+   width: 0;
+   height: 0;
+   z-index: 10;
+}
+
+.show {
    width: 100%;
    height: 100%;
-   z-index: 10;
-   transition: all 0.2s;
+   transition-delay: 0s;
+}
+
+.the-gear {
    display: none;
 }
 
@@ -1326,6 +1334,7 @@
    float: left;
    width: 62%;
    padding-top: 40px;
+   transition: all 0.2s;
 }
 
 .the-gear-list-option {
@@ -1446,10 +1455,18 @@
    width: 35px;
 } 
 
+.zone-hidden {
+   position: absolute;
+    top: 31vw;
+    left: 0;
+    width: 100%;
+    height: 73vh;
+}
+
 .cover-main  {
    position: absolute;
    top: -120px;
-   background-color: rgba(0, 0, 0, 0.8);
+   background: linear-gradient(to bottom,rgba(0,0,0,.95) 0,rgba(0,0,0,.95) 40%,rgba(0,0,0,.8) 100%);
    height: 100%;
    width: 100%;
 }
