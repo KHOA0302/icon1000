@@ -22,8 +22,7 @@ function reveal() {
     }
 }
 
-window.addEventListener('scroll', fadeOut);
-                        
+window.addEventListener('scroll', fadeOut);                  
 function fadeOut() {
     var fadeOuts = document.querySelectorAll(' .fadeOut');
     for(var i = 0; i < fadeOuts.length; i++){
@@ -52,8 +51,7 @@ function fadeOut1() {
     }
 }
 
-window.addEventListener('scroll', Reveal);
-                        
+window.addEventListener('scroll', Reveal);                   
 function Reveal() {
     var Reveals = document.querySelectorAll(' .Reveal');
     for(var i = 0; i < Reveals.length; i++){
@@ -66,8 +64,7 @@ function Reveal() {
     };
 }
 
-window.addEventListener('scroll', Blur);
-                        
+window.addEventListener('scroll', Blur);                 
 function Blur() {
     var Blurs = document.querySelectorAll(' .Blur');
     for(var i = 0; i < Blurs.length; i++){
@@ -84,8 +81,12 @@ function Blur() {
 var cover = document.querySelector('.cover-main');
 var overlay = document.querySelector('.overplay');
 var theGear = document.querySelector('.the-gear');
+var theRide = document.querySelector('.the-ride');
+var theBrand = document.querySelector('.the-brand');
 var targetHidden = document.querySelector('.zone-hidden');
-var theItem = document.querySelector('.header__navbar-item');
+var gearHoverShow = document.querySelector('.gearShow');
+var rideHoverShow = document.querySelector('.rideShow');
+var brandHoverShow = document.querySelector('.brandShow');
 var theGearTarget = document.querySelector('.the-gear-link');
 var theRideTarget = document.querySelector('.the-ride-link');
 var theBrandTarget = document.querySelector('.the-brand-link');
@@ -93,20 +94,49 @@ var theBrandTarget = document.querySelector('.the-brand-link');
   theGearTarget.onmouseover = function() {
     overlay.classList.add('show');
     theGear.style.display = 'block';
+    theRide.style.display = 'none';
+    theBrand.style.display= 'none';
     cover.style.display = 'block';
-    theItem.classList.add('bonus');
+    gearHoverShow.classList.add('bonus');
+    rideHoverShow.classList.remove('bonus');
+    brandHoverShow.classList.remove('bonus');
   }
+  
+  theRideTarget.onmouseover = function() {
+    overlay.classList.add('show');
+    theRide.style.display = 'block';
+    cover.style.display = 'block';
+    rideHoverShow.classList.add('bonus');
+    gearHoverShow.classList.remove('bonus');
+    brandHoverShow.classList.remove('bonus');
+    theGear.style.display = 'none';
+    theBrand.style.display = 'none';
+  }
+
+  theBrandTarget.onmouseover = function() {
+    overlay.classList.add('show');
+    theBrand.style.display = 'block';
+    cover.style.display = 'block';
+    brandHoverShow.classList.add('bonus');
+    rideHoverShow.classList.remove('bonus');
+    gearHoverShow.classList.remove('bonus');
+    theRide.style.display = 'none';
+    theGear.style.display = 'none';
+  }
+
   targetHidden.onmouseover= function() {
     overlay.classList.remove('show');
     theGear.style.display = 'none';
+    theRide.style.display = 'none';
+    theBrand.style.display = 'none';
     cover.style.display = 'none';
-    theItem.classList.remove('bonus');
+    gearHoverShow.classList.remove('bonus');
+    rideHoverShow.classList.remove('bonus');
+    brandHoverShow.classList.remove('bonus');
   }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 window.addEventListener("scroll", closed);
-
 function closed() {
   var appear = document.querySelector('.sticky');
   var topOverplay = document.querySelector('.overplay');

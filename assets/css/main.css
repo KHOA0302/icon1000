@@ -257,6 +257,10 @@
    height: 4px;
 }
 
+.header__navbar-item-wrap:hover:after {
+   height: 4px;
+}
+
 .sticky .header__navbar-item-wrap::after {
    bottom: 20%;
 }
@@ -1455,6 +1459,286 @@
    width: 35px;
 } 
 
+.the-ride {
+   display: none;
+}
+
+.the-ride a, li {
+   text-decoration: none;
+   list-style: none;
+}
+
+.the-ride-wrap {
+   position: absolute;
+   z-index: 1;
+   width: 100%;
+   height: 65%;
+}
+
+.the-ride-list {
+   float: left;
+   width: 33%;
+   padding-top: 40px;
+   transition: all 0.2s;
+}
+
+.the-ride-list-option {
+   float: left;
+   width: 100%;
+   padding-left: 40px;
+   height: 100%;
+   margin-top: 0;
+   margin-bottom: 80px;
+   padding-left: 33%!important;
+}
+
+.the-ride-list-item-subheanding {
+   
+}
+
+.the-ride-list-option-subheanding-text {
+   margin-bottom: 8px;
+}
+
+.the-ride-list-option-subheanding-text-link {
+   color: var(--primary-color);
+   line-height: 4rem;
+    letter-spacing: 5px;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.the-ride-list-option-item-wrap {
+
+}
+
+.the-ride-list-item {
+   
+}
+
+.the-ride-list-link {
+   color: #c9c0c0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.6rem;
+    text-transform: initial;
+}
+
+.the-ride a:hover, li:hover {
+   color: var(--width-color);
+}
+
+.the-ride-main-link {
+   float: right;
+   position: absolute;
+   background-image: url(https://s3-us-west-2.amazonaws.com/iconmotosports/videos/poster/Icon1000TheRideEverythingIsProcessMainFeature.jpg?mtime=20160806094222);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   width: 33%;
+   height: 27vw;
+   right: 0;
+}
+
+.the-ride-main-link-wrap {
+   position: absolute;
+    bottom: 25px;
+    left: 30px;
+    z-index: 1;
+}
+
+.the-ride-main-link-heading {
+   font-size: 4rem;
+    line-height: 5rem;
+    margin-top: 30px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    letter-spacing: 6px;
+}
+
+.the-ride-main-link-subheading {
+   position: relative;
+   font-size: 1.4rem;
+    letter-spacing: 4px;
+    color: var(--white-color);
+    line-height: 3rem;
+    margin-top: 20px;
+    float: left;
+}
+
+.the-ride-main-link::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.4);
+   transition: all 0.5s;
+}
+
+.the-ride-main-link:hover:after {
+   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.the-ride-main-link-subheading::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   height: 3px;
+   background: var(--primary-color);
+   transition: all 0.3s;
+   transform-origin: center center;
+   margin-bottom: 5px;
+   top: -10%;
+}
+
+.the-ride-main-link:hover .the-ride-main-link-subheading:before {
+   width: 35px;
+} 
+
+.the-brand {
+   display: none;
+}
+
+.the-brand a, li {
+   text-decoration: none;
+   list-style: none;
+}
+
+.the-brand-wrap {
+   position: absolute;
+   z-index: 1;
+   width: 100%;
+   height: 65%;
+}
+
+.the-brand-list {
+   float: left;
+   width: 33%;
+   padding-top: 40px;
+   transition: all 0.2s;
+}
+
+.the-brand-list-option {
+   float: left;
+   width: 100%;
+   padding-left: 40px;
+   height: 100%;
+   margin-top: 0;
+   margin-bottom: 80px;
+   padding-left: 33%!important;
+}
+
+.the-brand-list-item-subheanding {
+   
+}
+
+.the-brand-list-option-subheanding-text {
+   margin-bottom: 8px;
+}
+
+.the-brand-list-option-subheanding-text-link {
+   color: var(--primary-color);
+   line-height: 4rem;
+    letter-spacing: 5px;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.the-brand-list-option-item-wrap {
+
+}
+
+.the-brand-list-item {
+   
+}
+
+.the-brand-list-link {
+   color: #c9c0c0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.6rem;
+    text-transform: initial;
+}
+
+.the-brand a:hover, li:hover {
+   color: var(--width-color);
+}
+
+.the-brand-main-link {
+   float: right;
+   position: absolute;
+   background-image: url(https://s3-us-west-2.amazonaws.com/iconmotosports/lifestyle/Icon1000AboutUsMainFeature.jpg?mtime=20160806114735);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   width: 33%;
+   height: 27vw;
+   right: 0;
+}
+
+.the-brand-main-link-wrap {
+   position: absolute;
+    bottom: 25px;
+    left: 30px;
+    z-index: 1;
+}
+
+.the-brand-main-link-heading {
+   font-size: 4rem;
+    line-height: 5rem;
+    margin-top: 30px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    letter-spacing: 6px;
+}
+
+.the-brand-main-link-subheading {
+   position: relative;
+   font-size: 1.4rem;
+    letter-spacing: 4px;
+    color: var(--white-color);
+    line-height: 3rem;
+    margin-top: 20px;
+    float: left;
+}
+
+.the-brand-main-link::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.4);
+   transition: all 0.5s;
+}
+
+.the-brand-main-link:hover:after {
+   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.the-brand-main-link-subheading::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   height: 3px;
+   background: var(--primary-color);
+   transition: all 0.3s;
+   transform-origin: center center;
+   margin-bottom: 5px;
+   top: -10%;
+}
+
+.the-brand-main-link:hover .the-brand-main-link-subheading:before {
+   width: 35px;
+} 
+
 .zone-hidden {
    position: absolute;
     top: 31vw;
@@ -1467,7 +1751,7 @@
    position: absolute;
    top: -120px;
    background: linear-gradient(to bottom,rgba(0,0,0,.95) 0,rgba(0,0,0,.95) 40%,rgba(0,0,0,.8) 100%);
-   height: 100%;
+   height: 120%;
    width: 100%;
 }
 
