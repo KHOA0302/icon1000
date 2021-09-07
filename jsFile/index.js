@@ -144,3 +144,41 @@ function closed() {
   else topOverplay.style.top = '120px';
 }
 
+function menuShow () {
+  var menuBtn = document.querySelector('.header__navbar-icon-menu');
+  var header = document.querySelector('.header__navbar-option-wrap');
+  var logoMain = document.querySelector('.header__navbar-logo-wrap');
+  var optionLeft = document.querySelector('.header__navbar-option-left');
+  var optionRight = document.querySelector('.header__navbar-option-right');
+  var lineOne = document.querySelector('.one');
+  var lineTwo = document.querySelector('.two');
+  var lineThree = document.querySelector('.three');
+  var line = document.querySelector('.line');
+  var showBrand = document.querySelector('.header__navbar-brand-option-left');
+  var hint;
+  menuBtn.onclick = function (){
+    if(hint == 1) {
+      optionRight.style.display = 'none';
+      optionLeft.style.display = 'none';
+      header.style.background = 'var(--white-color)';
+      header.style.marginLeft = '0px';
+      header.style.width = '100%';
+      lineOne.style.transform = 'translateY(8px)';
+      lineThree.style.transform = 'translateY(-8px)';
+      logoMain.style.display = 'none';  
+      showBrand.style.display = 'block';
+      return hint = 0;
+    }
+    else {
+      optionRight.style.display = 'block';
+      optionLeft.style.display = 'block';
+      header.style.background = 'initial';
+      header.style.marginLeft = '229px';
+      lineOne.style.transform = 'initial';
+      lineThree.style.transform = 'initial';
+      logoMain.style.display = 'block';
+      return hint = 1;
+    }
+  }
+}; menuShow();
+

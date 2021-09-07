@@ -37,12 +37,7 @@
 .line  {
   z-index: 1;
   transition: width .15s ease-in-out,transform .15s ease-in-out;
-    transition-property: width, transform;
-    transition-duration: 0.15s, 0.15s;
-    transition-timing-function: ease-in-out, ease-in-out;
-    transition-delay: 0s, 0s;
 }
-
 .header__navbar-icon-menu:hover .two {
    transition-delay: 0.05s;
    width: 16px;
@@ -185,6 +180,40 @@
 
 .sticky .header__navbar-logo-down-link {
    background-size: 90px;
+}
+
+.header__navbar-brand-option-left {
+   display: none !important;
+   padding: 0 !important;
+}
+
+.header__navbar-brand-item {
+   min-width: 350px;
+   display: inline-block;
+   padding-left: 100px;
+   padding-right: 50px;
+}
+
+.header__navbar-brand-item-wrap {
+   display: table;
+   height: 120px;
+   margin-left: 16px;
+}
+
+.header__navbar-brand-item-link {
+   
+}
+
+.header__navbar-brand-item {
+   
+} 
+
+.header__navbar-brand-item-wrap {
+   
+}
+
+.header__navbar-brand-item-link {
+   
 }
 
 .proactive {
