@@ -155,28 +155,29 @@ function menuShow () {
   var lineThree = document.querySelector('.three');
   var line = document.querySelector('.line');
   var showBrand = document.querySelector('.header__navbar-brand-option-left');
-  var hint;
+  var hint = 1;
   menuBtn.onclick = function (){
     if(hint == 1) {
-      optionRight.style.display = 'none';
-      optionLeft.style.display = 'none';
       header.style.background = 'var(--white-color)';
-      header.style.marginLeft = '0px';
-      header.style.width = '100%';
       lineOne.style.transform = 'translateY(8px)';
       lineThree.style.transform = 'translateY(-8px)';
       logoMain.style.display = 'none';  
-      showBrand.style.display = 'block';
+      showBrand.style.display = 'inline-block';
+      header.style.marginLeft = '0px';
+      header.style.width = '100%';
+      header.style.transition = 'none';
       return hint = 0;
     }
     else {
-      optionRight.style.display = 'block';
-      optionLeft.style.display = 'block';
+      optionRight.style.display = 'initial';
+      optionLeft.style.display = 'initial';
       header.style.background = 'initial';
       header.style.marginLeft = '229px';
+      header.style.width = 'var(--width-header)';
       lineOne.style.transform = 'initial';
       lineThree.style.transform = 'initial';
-      logoMain.style.display = 'block';
+      logoMain.style.display = 'initial';
+      showBrand.style.display = 'none';
       return hint = 1;
     }
   }

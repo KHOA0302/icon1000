@@ -182,9 +182,9 @@
    background-size: 90px;
 }
 
-.header__navbar-brand-option-left {
-   display: none !important;
-   padding: 0 !important;
+.header .header__navbar-brand-option-left {
+   display: none;
+   padding: 0;
 }
 
 .header__navbar-brand-item {
@@ -227,7 +227,7 @@
 .header__navbar-option-wrap {
    position: absolute;
    height: 100%;
-   width: calc(100% - 229px);
+   width: var(--width-header);
    margin-left: 229px;
    justify-content: space-between;
    align-items: center;

@@ -3,6 +3,7 @@
     --white-color: white;
     --black-color: black;
     --text-color: #444;
+    --width-header: calc(100% - 229px);
 }
 
 * {
