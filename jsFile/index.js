@@ -90,6 +90,7 @@ var brandHoverShow = document.querySelector('.brandShow');
 var theGearTarget = document.querySelector('.the-gear-link');
 var theRideTarget = document.querySelector('.the-ride-link');
 var theBrandTarget = document.querySelector('.the-brand-link');
+var param;
 
   theGearTarget.onmouseover = function() {
     overlay.classList.add('show');
@@ -100,28 +101,31 @@ var theBrandTarget = document.querySelector('.the-brand-link');
     gearHoverShow.classList.add('bonus');
     rideHoverShow.classList.remove('bonus');
     brandHoverShow.classList.remove('bonus');
+    return param = 0;
   }
   
   theRideTarget.onmouseover = function() {
     overlay.classList.add('show');
     theRide.style.display = 'block';
     cover.style.display = 'block';
+    theGear.style.display = 'none';
+    theBrand.style.display = 'none';
     rideHoverShow.classList.add('bonus');
     gearHoverShow.classList.remove('bonus');
     brandHoverShow.classList.remove('bonus');
-    theGear.style.display = 'none';
-    theBrand.style.display = 'none';
+    return param = 1;
   }
 
   theBrandTarget.onmouseover = function() {
     overlay.classList.add('show');
     theBrand.style.display = 'block';
     cover.style.display = 'block';
+    theRide.style.display = 'none';
+    theGear.style.display = 'none';
     brandHoverShow.classList.add('bonus');
     rideHoverShow.classList.remove('bonus');
     gearHoverShow.classList.remove('bonus');
-    theRide.style.display = 'none';
-    theGear.style.display = 'none';
+    return param = 2;
   }
 
   targetHidden.onmouseover= function() {
@@ -145,41 +149,69 @@ function closed() {
 }
 
 function menuShow () {
-  var menuBtn = document.querySelector('.header__navbar-icon-menu');
-  var header = document.querySelector('.header__navbar-option-wrap');
-  var logoMain = document.querySelector('.header__navbar-logo-wrap');
-  var optionLeft = document.querySelector('.header__navbar-option-left');
-  var optionRight = document.querySelector('.header__navbar-option-right');
-  var lineOne = document.querySelector('.one');
-  var lineTwo = document.querySelector('.two');
-  var lineThree = document.querySelector('.three');
-  var line = document.querySelector('.line');
-  var showBrand = document.querySelector('.header__navbar-brand-option-left');
+  const menuBtn = document.querySelector('.header__navbar-icon-menu');
+
+               //// Hide main navbar + logo + the -(section) //////
+  const logoMain = document.querySelector('.header__navbar-logo-wrap');
+  const navBarOptionLeft = document.querySelector('.header__navbar-option-left');
+  const navBarOptionRight = document.querySelector('.header__navbar-option-right')
+  const theGear = document.querySelector('.the-gear');
+  const theRide = document.querySelector('.the-ride');
+  const theBrand = document.querySelector('.the-brand ');
+  const coverMain = document.querySelector('.cover-main');
+  const underline = document.querySelectorAll('.header__navbar-item');
+  console.log(underline);
+               //// reveal other logo //////
+  const logoMinor = document.querySelector('.header__navbar-brand-option-left');
+               ///animation of line////
+  const lineOne = document.querySelector('.one');
+  const lineThree = document.querySelector('.three');
+  
+  
   var hint = 1;
   menuBtn.onclick = function (){
     if(hint == 1) {
-      header.style.background = 'var(--white-color)';
+      logoMain.style.display = 'none';
+      navBarOptionLeft.style.display = 'none';
+      navBarOptionRight.style.display = 'none';
+      logoMinor.style.display = 'block';
       lineOne.style.transform = 'translateY(8px)';
       lineThree.style.transform = 'translateY(-8px)';
-      logoMain.style.display = 'none';  
-      showBrand.style.display = 'inline-block';
-      header.style.marginLeft = '0px';
-      header.style.width = '100%';
-      header.style.transition = 'none';
+      theGear.style.display = 'none';
+      theRide.style.display = 'none';
+      theBrand.style.display = 'none';
+      coverMain.style.display = 'none';
+      if(param === 0){
+        underline[0].classList.remove('bonus');
+      } else if(param === 1){
+        underline[1].classList.remove('bonus');
+      } else {
+        underline[2].classList.remove('bonus');
+      }
       return hint = 0;
     }
     else {
-      optionRight.style.display = 'initial';
-      optionLeft.style.display = 'initial';
-      header.style.background = 'initial';
-      header.style.marginLeft = '229px';
-      header.style.width = 'var(--width-header)';
+      logoMain.style.display = 'block';
+      navBarOptionLeft.style.display = 'inline-block';
+      navBarOptionRight.style.display = 'inline-block';
+      logoMinor.style.display = 'none';
       lineOne.style.transform = 'initial';
       lineThree.style.transform = 'initial';
-      logoMain.style.display = 'initial';
-      showBrand.style.display = 'none';
       return hint = 1;
     }
   }
 }; menuShow();
 
+
+function a(x) {
+  x++;
+  return function() {
+    console.log(++x);
+  };
+};
+
+let x = a(1);
+x();
+x();
+x();
+x();

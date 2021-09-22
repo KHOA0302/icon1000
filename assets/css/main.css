@@ -38,6 +38,7 @@
   z-index: 1;
   transition: width .15s ease-in-out,transform .15s ease-in-out;
 }
+
 .header__navbar-icon-menu:hover .two {
    transition-delay: 0.05s;
    width: 16px;
@@ -183,6 +184,8 @@
 .header .header__navbar-brand-option-left {
    display: none;
    padding: 0;
+   margin-left: -229px;
+   background-color: var(--white-color);
 }
 
 .header__navbar-brand-item {
@@ -284,6 +287,10 @@
 
 .header__navbar-item-link {
    text-decoration: none;
+}
+
+.header .the-gear-link, .the-ride-link, .the-brand-link {
+   display: table-cell;
 }
 
 .header__navbar-option-right {
@@ -508,7 +515,7 @@
    font-size: 1.5rem;
    text-indent: -9999px;
    overflow: hidden;
-   background-image: url(https://scontent.fvca1-2.fna.fbcdn.net/v/t1.15752-9/79087086_589877518487898_8062509975236247552_n.png?_nc_cat=109&ccb=1-5&_nc_sid=ae9488&_nc_ohc=fHvkT3vCYGEAX8VJ0Ha&_nc_ht=scontent.fvca1-2.fna&oh=36b1692253bfca30cb3e6b286b428d23&oe=61418EEC);
+   background-image: url(/assets/img/right__arrow.png);  
    background-repeat: no-repeat;
    background-position: center center;
    background-size: 25px;
@@ -1283,6 +1290,13 @@
    transition-delay: 0s;
 }
 
+.supernav {
+   height: 100%;
+   width: 100%;
+   background-color: var(--black-color);
+   display: none;
+}
+
 .the-gear {
    display: none;
 }
@@ -1452,17 +1466,17 @@
 .the-ride-list-option-subheanding-text-link {
    color: var(--primary-color);
    line-height: 4rem;
-    letter-spacing: 5px;
-    font-weight: 400;
-    font-size: 1.4rem;
+   letter-spacing: 5px;
+   font-weight: 400;
+   font-size: 1.4rem;
 }
 
 .the-ride-list-link {
    color: #c9c0c0;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 2.6rem;
-    text-transform: initial;
+   font-size: 1.5rem;
+   font-weight: 300;
+   line-height: 2.6rem;
+   text-transform: initial;
 }
 
 .the-ride a:hover, li:hover {
@@ -1483,28 +1497,28 @@
 
 .the-ride-main-link-wrap {
    position: absolute;
-    bottom: 25px;
-    left: 30px;
-    z-index: 1;
+   bottom: 25px;
+   left: 30px;
+   z-index: 1;
 }
 
 .the-ride-main-link-heading {
    font-size: 4rem;
-    line-height: 5rem;
-    margin-top: 30px;
-    margin-bottom: 6px;
-    font-weight: 500;
-    letter-spacing: 6px;
+   line-height: 5rem;
+   margin-top: 30px;
+   margin-bottom: 6px;
+   font-weight: 500;
+   letter-spacing: 6px;
 }
 
 .the-ride-main-link-subheading {
    position: relative;
    font-size: 1.4rem;
-    letter-spacing: 4px;
-    color: var(--white-color);
-    line-height: 3rem;
-    margin-top: 20px;
-    float: left;
+   letter-spacing: 4px;
+   color: var(--white-color);
+   line-height: 3rem;
+   margin-top: 20px;
+   float: left;
 }
 
 .the-ride-main-link::after {
@@ -1584,17 +1598,17 @@
 .the-brand-list-option-subheanding-text-link {
    color: var(--primary-color);
    line-height: 4rem;
-    letter-spacing: 5px;
-    font-weight: 400;
-    font-size: 1.4rem;
+   letter-spacing: 5px;
+   font-weight: 400;
+   font-size: 1.4rem;
 }
 
 .the-brand-list-link {
    color: #c9c0c0;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 2.6rem;
-    text-transform: initial;
+   font-size: 1.5rem;
+   font-weight: 300;
+   line-height: 2.6rem;
+   text-transform: initial;
 }
 
 .the-brand a:hover, li:hover {
@@ -1615,28 +1629,28 @@
 
 .the-brand-main-link-wrap {
    position: absolute;
-    bottom: 25px;
-    left: 30px;
-    z-index: 1;
+   bottom: 25px;
+   left: 30px;
+   z-index: 1;
 }
 
 .the-brand-main-link-heading {
    font-size: 4rem;
-    line-height: 5rem;
-    margin-top: 30px;
-    margin-bottom: 6px;
-    font-weight: 500;
-    letter-spacing: 6px;
+   line-height: 5rem;
+   margin-top: 30px;
+   margin-bottom: 6px;
+   font-weight: 500;
+   letter-spacing: 6px;
 }
 
 .the-brand-main-link-subheading {
    position: relative;
    font-size: 1.4rem;
-    letter-spacing: 4px;
-    color: var(--white-color);
-    line-height: 3rem;
-    margin-top: 20px;
-    float: left;
+   letter-spacing: 4px;
+   color: var(--white-color);
+   line-height: 3rem;
+   margin-top: 20px;
+   float: left;
 }
 
 .the-brand-main-link::after {
@@ -1674,10 +1688,10 @@
 
 .zone-hidden {
    position: absolute;
-    top: 31vw;
-    left: 0;
-    width: 100%;
-    height: 73vh;
+   top: 31vw;
+   left: 0;
+   width: 100%;
+   height: 73vh;
 }
 
 .cover-main  {
