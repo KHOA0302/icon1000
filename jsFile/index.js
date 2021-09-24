@@ -148,7 +148,7 @@ function closed() {
   else topOverplay.style.top = '120px';
 }
 
-function menuShow () {
+function menuShow (param) {
   const menuBtn = document.querySelector('.header__navbar-icon-menu');
 
                //// Hide main navbar + logo + the -(section) //////
@@ -160,9 +160,13 @@ function menuShow () {
   const theBrand = document.querySelector('.the-brand ');
   const coverMain = document.querySelector('.cover-main');
   const underline = document.querySelectorAll('.header__navbar-item');
-  console.log(underline);
+  const body = document.querySelector('body');
+  const zoneHidden = document.querySelector('.zone-hidden');
                //// reveal other logo //////
   const logoMinor = document.querySelector('.header__navbar-brand-option-left');
+  const superNav = document.querySelector('.supernav');
+  const overlay = document.querySelector('.overplay');
+  const heightEffect = document.querySelector('.supernav-wrap');
                ///animation of line////
   const lineOne = document.querySelector('.one');
   const lineThree = document.querySelector('.three');
@@ -188,6 +192,11 @@ function menuShow () {
       } else {
         underline[2].classList.remove('bonus');
       }
+      overlay.classList.add('show'); 
+      superNav.style.display = 'block';
+      superNav.classList.add('open');
+      body.style.overflow = 'hidden';
+      zoneHidden.style.zIndex = '-1';
       return hint = 0;
     }
     else {
@@ -197,21 +206,13 @@ function menuShow () {
       logoMinor.style.display = 'none';
       lineOne.style.transform = 'initial';
       lineThree.style.transform = 'initial';
+      overlay.classList.remove('show'); 
+      superNav.style.display = 'none';
+      superNav.classList.remove('open');
+      body.style.overflow = 'initial';
+      zoneHidden.style.zIndex = '20';
       return hint = 1;
     }
   }
-}; menuShow();
+}; menuShow(param);
 
-
-function a(x) {
-  x++;
-  return function() {
-    console.log(++x);
-  };
-};
-
-let x = a(1);
-x();
-x();
-x();
-x();
