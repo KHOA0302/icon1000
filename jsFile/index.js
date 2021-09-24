@@ -148,7 +148,7 @@ function closed() {
   else topOverplay.style.top = '120px';
 }
 
-function menuShow (param) {
+function menuShow () {
   const menuBtn = document.querySelector('.header__navbar-icon-menu');
 
                //// Hide main navbar + logo + the -(section) //////
@@ -214,5 +214,5 @@ function menuShow (param) {
       return hint = 1;
     }
   }
-}; menuShow(param);
+}; menuShow();
 
