@@ -166,7 +166,6 @@ function menuShow () {
   const logoMinor = document.querySelector('.header__navbar-brand-option-left');
   const superNav = document.querySelector('.supernav');
   const overlay = document.querySelector('.overplay');
-  const heightEffect = document.querySelector('.supernav-wrap');
                ///animation of line////
   const lineOne = document.querySelector('.one');
   const lineThree = document.querySelector('.three');
@@ -216,3 +215,44 @@ function menuShow () {
   }
 }; menuShow();
 
+function search() {
+  const store = document.querySelector('.store-locator');
+  const searchItem = document.querySelector('.search-item');
+  const searchLocation = document.querySelector('.search-location');
+  const coverMain = document.querySelector('.cover-main');
+  const input = document.querySelector('.store-locator-form-input input[type=text]');
+  const subMitBtn = document.querySelector('.store-locator-form-input input[type=submit]');
+  const exitBtn = document.querySelector('.store-locator-exit i');
+  const header = document.querySelector('.header');
+  const body = document.querySelector('body');
+  const isLocation = true;
+  console.log(header);
+
+  searchLocation.onclick = ()=>{
+    overlay.classList.add('show');
+    store.style.display = 'block';
+    header.style.display = 'none';
+    body.style.overflow = 'hidden';
+    isLocation = !isLocation;
+  }
+
+  exitBtn.onclick = (e) => {
+    overlay.classList.remove('show');
+    coverMain.style.display = 'none';
+    store.style.display = 'none';
+    header.style.display = '';
+    body.style.overflow = '';
+    isLocation = !isLocation;
+  }
+ 
+  input.oninput = (e) => {
+    var locationName = e.target.value;
+    if(locationName.length >= 3) {
+      subMitBtn.style.opacity = '1';
+      subMitBtn.style.transform = 'translateX(0) scale(1)';
+    } else {
+      subMitBtn.style.opacity = '0';
+      subMitBtn.style.transform = '';
+    }
+  }
+} search();
