@@ -215,19 +215,23 @@ function menuShow () {
   }
 }; menuShow();
 
-function search() {
+function searchLocation() {
   const store = document.querySelector('.store-locator');
   const searchItem = document.querySelector('.search-item');
   const searchLocation = document.querySelector('.search-location');
   const coverMain = document.querySelector('.cover-main');
   const input = document.querySelector('.store-locator-form-input input[type=text]');
   const subMitBtn = document.querySelector('.store-locator-form-input input[type=submit]');
-  const exitBtn = document.querySelector('.store-locator-exit i');
+  const exitBtn = document.querySelector('.store-locator-exit');
   const header = document.querySelector('.header');
   const body = document.querySelector('body');
-  const isLocation = true;
-  console.log(header);
-
+  const theGear = document.querySelector('.the-gear');
+  const theRide = document.querySelector('.the-ride');
+  const theBrand = document.querySelector('.the-brand ');
+  const underline = document.querySelectorAll('.header__navbar-item');
+  const overlay = document.querySelector('.overplay');
+  var isLocation = true;
+  
   searchLocation.onclick = ()=>{
     overlay.classList.add('show');
     store.style.display = 'block';
@@ -235,14 +239,25 @@ function search() {
     body.style.overflow = 'hidden';
     isLocation = !isLocation;
   }
-
+  
   exitBtn.onclick = (e) => {
+    e.preventDefault();
     overlay.classList.remove('show');
     coverMain.style.display = 'none';
     store.style.display = 'none';
     header.style.display = '';
     body.style.overflow = '';
     isLocation = !isLocation;
+    theGear.style.display = 'none';
+    theRide.style.display = 'none';
+    theBrand.style.display = 'none';
+    if(param === 0){
+      underline[0].classList.remove('bonus');
+    } else if(param === 1){
+      underline[1].classList.remove('bonus');
+    } else {
+      underline[2].classList.remove('bonus');
+    }
   }
  
   input.oninput = (e) => {
@@ -255,4 +270,58 @@ function search() {
       subMitBtn.style.transform = '';
     }
   }
-} search();
+} searchLocation();
+
+function searchItem() {
+  const itemStore = document.querySelector('.search');
+  const searchItem = document.querySelector('.search-item');
+  console.log(searchItem);
+  const coverMain = document.querySelector('.cover-main');
+  const input = document.querySelector('.search-form-input input[type=text]');
+  const subMitBtn = document.querySelector('.search-form-input input[type=submit]');
+  const exitBtn = document.querySelector('.search-exit');
+  const header = document.querySelector('.header');
+  const body = document.querySelector('body');
+  const theGear = document.querySelector('.the-gear');
+  const theRide = document.querySelector('.the-ride');
+  const theBrand = document.querySelector('.the-brand ');
+  const underline = document.querySelectorAll('.header__navbar-item');
+  const overlay = document.querySelector('.overplay');
+
+  searchItem.onclick = ()=>{
+    overlay.classList.add('show');
+    itemStore.style.display = 'block';
+    header.style.display = 'none';
+    body.style.overflow = 'hidden';
+  }
+  
+  exitBtn.onclick = (e) => {
+    e.preventDefault();
+    overlay.classList.remove('show');
+    coverMain.style.display = 'none';
+    itemStore.style.display = 'none';
+    header.style.display = '';
+    body.style.overflow = '';
+    theGear.style.display = 'none';
+    theRide.style.display = 'none';
+    theBrand.style.display = 'none';
+    if(param === 0){
+      underline[0].classList.remove('bonus');
+    } else if(param === 1){
+      underline[1].classList.remove('bonus');
+    } else {
+      underline[2].classList.remove('bonus');
+    }
+  }
+ 
+  input.oninput = (e) => {
+    var locationName = e.target.value;
+    if(locationName.length >= 3) {
+      subMitBtn.style.opacity = '1';
+      subMitBtn.style.transform = 'translateX(0) scale(1)';
+    } else {
+      subMitBtn.style.opacity = '0';
+      subMitBtn.style.transform = '';
+    }
+  }
+} searchItem();
