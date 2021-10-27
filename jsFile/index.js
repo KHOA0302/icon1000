@@ -1,3 +1,9 @@
+if(window.innerWidth <= 1248) {
+  document.querySelector('.reveal').classList.add('active')
+}
+
+console.log(window.innerWidth)
+
 window.addEventListener("scroll", function(){
     var header = document.querySelector(".header");
     header.classList.toggle("sticky", window.scrollY > 0);
@@ -14,6 +20,7 @@ function reveal() {
         var revealtop = reveals[i].getBoundingClientRect().top;
         var revealpoint = 150;
         if(revealtop < windowheight - revealpoint){
+          if(!reveals[i].classList.contains('active'))
           reveals[i].classList.add('active');
         }
         // else {
