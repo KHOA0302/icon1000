@@ -280,6 +280,15 @@
     .main__news-heading {
         font-size: 7rem;
     }
+    .main__recruit-job {
+        padding: 0;
+    }
+    .main__news-icon {
+        margin-top: 150px;
+    }
+    .main__news-heading {
+        font-size: 4rem;
+    }
 }
 
 
@@ -312,4 +321,22 @@
     }
 }
 
+@media only screen and (max-width: 520px) {
+    .main__news-section-heading {
+        font-size: 2rem;
+    }
+    .main__news-section-sudheading {
+        font-size: 1.4rem;
+    }
+    .mains__news-section-title {
+        padding: 0 30px;  
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .mains__news-section-title h5 {
+        display: none;
+    }
+}
 
