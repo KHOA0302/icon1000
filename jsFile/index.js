@@ -2,6 +2,11 @@ if(window.innerWidth <= 1248) {
   document.querySelector('.reveal').classList.add('active')
 }
 
+if(window.innerWidth <= 1248) {
+  document.querySelector('.reveal').classList.add('active')
+}
+
+
 console.log(window.innerWidth)
 
 window.addEventListener("scroll", function(){

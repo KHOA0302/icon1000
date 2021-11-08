@@ -203,6 +203,42 @@
     .main__recruit-job {
         position: initial;
     }
+
+    .header {
+        height: 60px;
+        background-color: var(--primary-color);
+    }
+
+    .header__navbar-logo-up, .header__navbar-logo {
+        height: 60px;
+    }
+    .header__navbar-logo-down  {
+        display: none;
+    }
+
+    .header__navbar-logo-wrap ul:focus, .header__navbar-logo-wrap ul:hover {
+        height: 60px;
+    }
+
+    .header__navbar-option-wrap {
+        display: none;
+    }
+
+    .header__navbar-icon-menu {
+        display: none;
+    }
+
+    .sticky .header__navbar-logo, .header__navbar-logo-wrap {
+        width: 100% !important;
+        padding: 0;
+    }
+    .sticky .header__navbar-logo-up {
+        width: 100% !important;
+    }
+
+    .main__media-reveal {
+        top: 60px;
+    }
 }    
 
 
@@ -319,6 +355,13 @@
     .main__footer-summary-wrap {
         display: none;
     }
+
+    .main__media-single-content-des {
+        display: none;
+    }
+    .main__media-single-content-link {
+        margin: 20px;
+    }
 }
 
 @media only screen and (max-width: 520px) {
@@ -339,4 +382,6 @@
         display: none;
     }
 }
+
+
 
