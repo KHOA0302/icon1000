@@ -232,12 +232,21 @@
         width: 100% !important;
         padding: 0;
     }
+
+    .header__navbar-logo {
+        transition: none;
+    }
+
     .sticky .header__navbar-logo-up {
         width: 100% !important;
     }
 
     .main__media-reveal {
         top: 60px;
+    }
+
+    .sticky .header__navbar-logo-wrap ul:focus, .sticky .header__navbar-logo-wrap ul:hover {
+        height: 60px;
     }
 }    
 
